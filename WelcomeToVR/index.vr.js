@@ -11,12 +11,12 @@ export default class WelcomeToVR extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={asset('Prague_Getty.jpg')}/>
+        <Pano source={asset('ollalie-8505-Panorama-8k.jpg')}/>
         <Text
           style={{
-            backgroundColor: 'White',
-            fontSize: 0.7,
+            backgroundColor: 'white',
             color: 'black',
+            fontSize: 0.7,
             fontWeight: '400',
             layoutOrigin: [0.5, 0.5],
             paddingLeft: 0.2,

@@ -14,17 +14,32 @@ export default class WelcomeToVR extends React.Component {
         <Pano source={asset('Prague_Getty.jpg')}/>
         <Text
           style={{
-            //backgroundColor: '#777879',
+            backgroundColor: 'White',
             fontSize: 0.7,
+            color: 'black',
             fontWeight: '400',
             layoutOrigin: [0.5, 0.5],
             paddingLeft: 0.2,
             paddingRight: 0.2,
             textAlign: 'center',
             textAlignVertical: 'center',
-            transform: [{translate: [0, 0, -2]}],
+            transform: [{translate: [0, 0, -3]}],
           }}>
-          welcome
+          RUSH
+        </Text>
+        <Text
+          style={{
+            fontSize: 0.7,
+            color: 'white',
+            fontWeight: '400',
+            layoutOrigin: [0.5, 0.5],
+            paddingLeft: 0.2,
+            paddingRight: 0.2,
+            textAlign: 'center',
+            textAlignVertical: 'center',
+            transform: [{translate: [0, 0, -3]}],
+          }}>
+          DIGITAL
         </Text>
       </View>
     );

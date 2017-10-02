@@ -37,7 +37,7 @@ class OOLALA extends Component {
       <View>
         <Pano source={asset('chess-world.jpg')}/>
         <Animated.Image
-          source={{uri: 'http://i.imgur.com/XMKOH81.jpg'}}
+          source={{uri: 'https://i.imgur.com/XMKOH81.jpg'}}
           style={{
             flex: 1,
             width: 1,

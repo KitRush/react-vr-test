@@ -8,7 +8,8 @@ import {
   Text,
   View,
   Model,
-  StyleSheet
+  StyleSheet,
+  NativeModules
 } from 'react-vr';
 
 const styles = StyleSheet.create({
@@ -20,6 +21,8 @@ const styles = StyleSheet.create({
     color: 'red'
   }
 });
+
+const CubeModule = NativeModules.CubeModule;
 
 class OOLALA extends Component {
 
@@ -62,6 +65,10 @@ class OOLALA extends Component {
               }}
             onExit={()=>{
               this.setState({textColor:'white'});
+              }}
+            onClick={() =>{
+              this.bounce();
+              CubeModule.changeCubeColor('#'+(Math.random()*0xFFFFFF<<0).toString(16))
               }}>
             <Text 
             style={{color: this.state.textColor, fontSize: 0.2, textAlign: 'center'}}>
@@ -86,6 +93,10 @@ class OOLALA extends Component {
   };
 
   componentDidMount() {
+    this.bounce();
+  };
+
+  bounce() {
     this.state.bounceValue.setValue(1.5); // start large
     Animated.spring(
       this.state.bounceValue,
@@ -94,7 +105,7 @@ class OOLALA extends Component {
         friction: 1
       }
     ).start();
-  };
+  }
 }
 
 AppRegistry.registerComponent("app", () => OOLALA);

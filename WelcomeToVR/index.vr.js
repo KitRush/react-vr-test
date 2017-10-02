@@ -3,7 +3,7 @@ import {
   AppRegistry,
   asset,
   Animated,
-  VrAnimated,
+  VrButton,
   Pano,
   Text,
   View,
@@ -56,18 +56,18 @@ class OOLALA extends Component {
           transform: [{translate: [-1,1,-5]}],
         }}>
         
-          <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'red'}}>
-            <Text 
-            style={{color: this.state.textColor, fontSize: 0.2, textAlign: 'center'}}
+          <VrButton style={{ margin: 0.1, height: 0.3, backgroundColor: 'red'}}
             onEnter={()=>{
               this.setState({textColor:'red'});
               }}
             onExit={()=>{
               this.setState({textColor:'white'});
               }}>
+            <Text 
+            style={{color: this.state.textColor, fontSize: 0.2, textAlign: 'center'}}>
               Red
             </Text>
-          </View>
+          </VrButton>
           <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'orange'}}>
             <Text style={{fontSize: 0.2, textAlign: 'center'}}>Orange</Text>
           </View>

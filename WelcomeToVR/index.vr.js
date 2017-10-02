@@ -35,7 +35,7 @@ class OOLALA extends Component {
   render(){
     return (
       <View>
-        <Pano source={asset('ollalie-8505-Panorama-8k.jpg')}/>
+        <Pano source={asset('chess-world.jpg')}/>
         <Animated.Image
           source={{uri: 'http://i.imgur.com/XMKOH81.jpg'}}
           style={{
